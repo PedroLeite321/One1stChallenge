@@ -50,4 +50,4 @@ const main = ((txt) =>  {
     
     
 });
-main('Digite seu texto aqui');
+main('Digite seu texto aqui!');

@@ -20,28 +20,41 @@ const mainCrypt = () =>  {
         }
     }
    
-    const checkForInput = () => {
-        states.document.cryptBtn.addEventListener("click", () =>    {
-            
-            encrypt();
-        })
-    }
-    checkForInput();
+    
+    
     const encrypt = () =>   {
-        const getText = states.document.userMainInput.value;
-        let textContent;
+        
+        const checkForContent = ()  =>  {
+            const getText = states.document.userMainInput.value;
+            let textContent;
 
 
-        if (getText === "" || getText === undefined || getText === null) {
-            states.document.userMainInput.setAttribute('placeholder', "");
-            textContent = "Por favor, insira algo!";
+            if (getText === "" || getText === undefined || getText === null) {
+                states.document.userMainInput.setAttribute('placeholder', "");
+                textContent = "Por favor, insira algo!";
+                
+            }
             
-        }else   {
-            textContent = "Digite seu texto aqui";
+            
+
+            main(textContent);
         }
 
-        main(textContent);
+        const checkForInput = () => {
+            states.document.cryptBtn.addEventListener("click", () =>    {
+                
+                checkForContent();
+            })
+        }
+        checkForInput();
+      
+        const getUserInput = () => {
+            const clearAside = () =>    {
+
+            }
+        }
     }
+    encrypt();
     
 }
 mainCrypt();
