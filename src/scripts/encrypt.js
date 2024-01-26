@@ -16,7 +16,7 @@ const mainCrypt = () =>  {
             userMainInput: document.getElementById("animated__input"),
             output__area:document.querySelector(".output__area"),
             cryptBtn: document.querySelector(".btn__encrypt"),
-
+    
         }
     }
    
@@ -29,14 +29,18 @@ const mainCrypt = () =>  {
     checkForInput();
     const encrypt = () =>   {
         const getText = states.document.userMainInput.value;
-        let textContent = "alface";
+        let textContent;
 
 
         if (getText === "" || getText === undefined || getText === null) {
-            document.getElementById('animated__input').setAttribute('placeholder', "");
+            states.document.userMainInput.setAttribute('placeholder', "");
             textContent = "Por favor, insira algo!";
-            main(textContent);
+            
+        }else   {
+            textContent = "Digite seu texto aqui";
         }
+
+        main(textContent);
     }
     
 }
