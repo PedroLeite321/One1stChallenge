@@ -8,15 +8,17 @@
     
 }
 
-.input__text    {
+.input__text     {
     display:flex;
     align-items:center;
+    align-self:center;
     justify-content: center;
     width:100%;
     height:100%;
 }
 .input__area    {
-    width:450px;
+    width:550px;
+    margin-top:16%;
     background-color:rgba(250, 250, 250, 0.3);
     z-index: 3;
     border:none;
@@ -36,8 +38,9 @@
     display:flex;
     flex-direction:column;
     align-items: center; 
-    justify-content: space-between;
-    height:570px;
+    justify-content: center;
+    gap:90px;
+    height:100%;
 }
 .to-row {
     display:flex;
