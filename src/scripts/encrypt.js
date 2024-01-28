@@ -129,9 +129,6 @@ const mainCrypt = () =>  {
             defineCryptograph();
             
             
-            const clearAside = () =>    {
-
-            }
         }
     }
     encrypt();
