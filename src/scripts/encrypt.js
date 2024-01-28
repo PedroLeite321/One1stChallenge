@@ -11,6 +11,7 @@ A letra "u" é convertida para "ufat"
 
 
 const mainCrypt = () =>  {
+    let originalStr;
     const states = {
         document: {
             userMainInput: document.getElementById("animated__input"),
@@ -19,6 +20,7 @@ const mainCrypt = () =>  {
             images:document.querySelector(".image__guyWLupe"),
             asideTitle:document.querySelector('.out__area'),
             asideText:document.querySelector('.out__paragraph'),
+            decryptBtn: document.querySelector(".bnt__decrypt"),
     
         }
     }
@@ -30,20 +32,29 @@ const mainCrypt = () =>  {
         const checkForContent = ()  =>  {
             const getText = states.document.userMainInput.value;
             let textContent;
+            let defaut = 'Digite seu texto aqui!';
 
-            console.log("alface")
             if (getText === "" || getText === undefined || getText === null) {
-                states.document.userMainInput.setAttribute('placeholder', "");
                 textContent = "Por favor, insira algo!";
                 main(textContent);
                 
             }else   {
+                
+                
                 getUserInput();
+                
             }
             
             
 
            
+        }
+        const getOriginalString = () => {
+            const decryptBtn  = states.document.decryptBtn;
+            
+            decryptBtn.setAttribute('disabled', true);
+            states.document.asideText.textContent = originalStr;
+
         }
 
         const checkForInput = () => {
@@ -51,11 +62,17 @@ const mainCrypt = () =>  {
                 
                 checkForContent();
             })
+
+            states.document.decryptBtn.addEventListener('click', () =>  {
+                getOriginalString();
+            })
         }
         checkForInput();
       
         const getUserInput = () => {
             const userTxt = states.document.userMainInput.value;
+            states.document.decryptBtn.removeAttribute('disabled');
+            originalStr = userTxt;
             let str = [];
             const checkCryptoLogic = (char) =>   {
                 
@@ -99,7 +116,7 @@ const mainCrypt = () =>  {
             
             const defineCryptograph = () => {
                 let encryptedStr;
-               
+                
 
                 const setupAside = () =>    {
                 
@@ -107,16 +124,23 @@ const mainCrypt = () =>  {
                     let asideTitle = states.document.asideTitle;
                     let asideParagraph = states.document.asideText;
 
-                    const changeAside = () =>   {
+                    states.document.userMainInput.value = '';
+
+                    
+                    main('Digite seu texto aqui!');
+
+                    const changeText = () =>   {
                          asideTitle.classList.add('deactivate_display');
                 
                         asideImage.classList.add('deactivate_display');
                 
                         asideParagraph.classList.add('toUp');
 
+                        
                         asideParagraph.textContent = encryptedStr;
+                        
                     }
-                    changeAside();
+                    changeText();
 
                 }
                 for(let i = 0; i < userTxt.length; i++) {
