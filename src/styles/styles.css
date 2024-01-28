@@ -129,3 +129,14 @@
     text-align: center;
     
 }
+.deactivate_display {
+    display:none;
+
+}
+.toUp   {
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    margin-top:80px;
+    height:100vh;
+}

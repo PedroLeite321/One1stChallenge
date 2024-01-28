@@ -16,6 +16,9 @@ const mainCrypt = () =>  {
             userMainInput: document.getElementById("animated__input"),
             output__area:document.querySelector(".output__area"),
             cryptBtn: document.querySelector(".btn__encrypt"),
+            images:document.querySelector(".image__guyWLupe"),
+            asideTitle:document.querySelector('.out__area'),
+            asideText:document.querySelector('.out__paragraph'),
     
         }
     }
@@ -89,17 +92,38 @@ const mainCrypt = () =>  {
                 }
                 
                 //get the modified string and add to the aside and write it in the placeholder aswell
-                return str;
+                
+                return str.join('');
                 
             }
             
             const defineCryptograph = () => {
                 let encryptedStr;
+               
+
+                const setupAside = () =>    {
+                
+                    let asideImage = states.document.images;
+                    let asideTitle = states.document.asideTitle;
+                    let asideParagraph = states.document.asideText;
+
+                    const changeAside = () =>   {
+                         asideTitle.classList.add('deactivate_display');
+                
+                        asideImage.classList.add('deactivate_display');
+                
+                        asideParagraph.classList.add('toUp');
+
+                        asideParagraph.textContent = encryptedStr;
+                    }
+                    changeAside();
+
+                }
                 for(let i = 0; i < userTxt.length; i++) {
                     
                     encryptedStr = checkCryptoLogic(userTxt[i]);
                 }
-                console.log(encryptedStr)
+                setupAside();
         
             }
             defineCryptograph();
