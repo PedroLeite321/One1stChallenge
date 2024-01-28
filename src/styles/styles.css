@@ -147,17 +147,15 @@
 }
 .btn__copy  {
     display:flex;
-    flex: 1 0 0;
     justify-content: center;
     align-items: center;
-    
     color: #2d5c98 ;
     border:solid 1px #0A3671;
-    font-size:1.3em;
+    font-size:1.5em;
     font-weight: 400;
     width:230px;
+    height:60px;
     border-radius:20px;
-    height:50px;
     background-color: #dfe1e3;
     transform:translateY(0px);
     transition: transform 0.3s ease-in-out;
@@ -168,4 +166,12 @@
  .btn__copy:hover {
      font-weight: 500;
      background-color:#f1f1f1;
+ }
+
+ #none__article {
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content: space-around;
+    height:300px;
  }
