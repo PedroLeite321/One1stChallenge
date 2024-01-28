@@ -21,6 +21,7 @@ const mainCrypt = () =>  {
             asideTitle:document.querySelector('.out__area'),
             asideText:document.querySelector('.out__paragraph'),
             decryptBtn: document.querySelector(".bnt__decrypt"),
+            copyBtn: document.querySelector(".btn__copy"),
     
         }
     }
@@ -51,12 +52,28 @@ const mainCrypt = () =>  {
         }
         const getOriginalString = () => {
             const decryptBtn  = states.document.decryptBtn;
-            
+
             decryptBtn.setAttribute('disabled', true);
             states.document.asideText.textContent = originalStr;
 
         }
 
+
+        const copyToClipboard = () =>   {
+           
+
+            var getCopy = states.document.asideText.textContent;
+
+            // Use the Clipboard API to write text to the clipboard
+            navigator.clipboard.writeText(getCopy)
+              .then(function() {
+                // Optionally, provide user feedback
+                alert("Text copied to clipboard: " + getCopy);
+              })
+              .catch(function(err) {
+                console.error('Unable to copy text to clipboard', err);
+              });
+        }
         const checkForInput = () => {
             states.document.cryptBtn.addEventListener("click", () =>    {
                 
@@ -65,6 +82,11 @@ const mainCrypt = () =>  {
 
             states.document.decryptBtn.addEventListener('click', () =>  {
                 getOriginalString();
+            })
+
+            states.document.copyBtn.addEventListener('click', () => {
+
+                copyToClipboard();
             })
         }
         checkForInput();
