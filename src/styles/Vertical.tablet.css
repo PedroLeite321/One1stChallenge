@@ -29,4 +29,8 @@
     .bnt__decrypt   {
         width:160px;
     }
+    .output__area   {
+        padding:20px;
+        width:100%;
+    }
 }
