@@ -80,7 +80,7 @@
     border:solid 1px #0A3671;
     font-size:1.3em;
     font-weight: 400;
-    width:330px;
+   
     border-radius:20px;
     height:60px;
     background-color: #dfe1e3;
@@ -96,7 +96,7 @@
 }
 .project__title {
     height:fit-content;
-    position:fixed;
+    position:absolute;
     font-size:0.9em;
     padding:15px 0px 0px 10px;
     color:#0A3671;
