@@ -79,7 +79,7 @@
     color: #2d5c98 ;
     border:solid 1px #0A3671;
     font-size:1.3em;
-    font-weight: 400;
+    font-weight: 500;
    
     border-radius:20px;
     height:60px;
@@ -116,6 +116,7 @@
     margin:20px;
     box-shadow: 1px 5px 8px 3px rgb(173, 172, 172);
     background-color:#fff;
+    
 }
 
 .out__area   {
@@ -152,7 +153,8 @@
     color: #2d5c98 ;
     border:solid 1px #0A3671;
     font-size:1.5em;
-    font-weight: 400;
+    margin-top:30px;
+    font-weight: 500;
     width:230px;
     height:60px;
     border-radius:20px;
