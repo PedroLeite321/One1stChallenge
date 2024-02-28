@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- site icon -->
+    <link rel="shortcut icon" href="./assets/images/" type="image/x-icon">
     <!--Styles-->
     <link rel="stylesheet" href="./src/styles/reset.css">
     <link rel="stylesheet" href="./src/styles/styles.css">
@@ -30,17 +33,24 @@
                 <form class="form__area" action="">
 
                     <textarea name="user__input" class="input__area" id="animated__input" cols="30" rows="10"></textarea>
+
+                    <div class="alert__user">
+                        <p><span class="alert__symbol">!</span> Por favor, não utilize acentos.</p>
+                    </div>
+                    
                     <div class="to-row">
     
                         <input class="btn__encrypt" value="Criptografar" type="button">
     
                         <input class="bnt__decrypt" value="Descriptografar" type="button"  disabled>
                     </div>
+                    
 
                 </form>
+               
 
             </section>
-
+        
         <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
         <div class="output__area">
