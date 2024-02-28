@@ -96,6 +96,7 @@ const mainCrypt = () =>  {
             states.document.decryptBtn.removeAttribute('disabled');
             originalStr = userTxt;
             let str = [];
+            //I could also fix it by making char going to lowercase. Eu poderia ter solucionado o problema ao fazer o parametro char mudar para minusculo.
             const checkCryptoLogic = (char) =>   {
                 
                 
@@ -122,6 +123,26 @@ const mainCrypt = () =>  {
                         addToStr(char);
                         break;
                     case 'u':
+                        char = 'ufat';
+                        addToStr(char);
+                        break;
+                    case 'A':
+                        char = 'ai';
+                        addToStr(char);
+                        break;
+                    case 'I':
+                        char = 'imes';
+                        addToStr(char);
+                        break;
+                    case 'E':
+                        char = 'enter';
+                        addToStr(char);
+                        break;
+                    case 'O':
+                        char = 'ober';
+                        addToStr(char);
+                        break;
+                    case 'U':
                         char = 'ufat';
                         addToStr(char);
                         break;
